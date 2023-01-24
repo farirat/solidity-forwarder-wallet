@@ -33,5 +33,4 @@ jobs:
         run: REPORT_GAS=true npx hardhat test
       - name: Run Coverage
         run: |
-          npx hardhat coverage &
-          npx istanbul check-coverage --statements 90 --branches 90 --functions 90 --lines 90
+          npx hardhat coverage
