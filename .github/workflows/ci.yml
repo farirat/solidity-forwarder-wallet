@@ -24,15 +24,14 @@ jobs:
         uses: actions/setup-node@v3
         with:
           node-version: "${{ matrix.node }}"
-      - run: yarn --ignore-scripts
-        shell: bash
+      - run: npm install --save-dev hardhat
       - name: Create local node and deploy
         run: |
-          yarn hardhat node &
-          yarn hardhat run scripts/deploy.ts --network localhost
+          npx hardhat node &
+          npx hardhat run scripts/deploy.ts --network localhost
       - name: Run Tests
-        run: REPORT_GAS=true yarn hardhat test
+        run: REPORT_GAS=true npx hardhat test
       - name: Run Coverage
         run: |
-          yarn hardhat coverage &
-          yarn istanbul check-coverage --statements 90 --branches 90 --functions 90 --lines 90
+          npx hardhat coverage &
+          npx istanbul check-coverage --statements 90 --branches 90 --functions 90 --lines 90
