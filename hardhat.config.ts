@@ -19,6 +19,14 @@ const config: HardhatUserConfig = {
           "88fce7d4abf558ec3836285e3e51129abc620f143b141a17842b528c12ffc001",
           "86fae7d4abf558ec3836285e3e51129abc620f443b143a17846b528c12ffc002"
       ]
+    },
+    testnet: {
+      url: 'https://bsc-testnet.blastapi.io/d0d6d081-3956-49a1-a9a7-b6ecf93bc27b',
+      accounts: [
+        "88fee7d4abf558ec3836285e3e51129abc620f243b149a17848b522c13ffc000",
+        "88fce7d4abf558ec3836285e3e51129abc620f143b141a17842b528c12ffc001",
+        "86fae7d4abf558ec3836285e3e51129abc620f443b143a17846b528c12ffc002"
+      ]
     }
   }
 };
